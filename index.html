@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Zapatos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Bienvenido a la Página de Zapatos</h1>
+    </header>
+    <main>
+        <section id="zapatos">
+            <h2>JeniSport</h2>
+            <img src="imagenes/logo.png" alt="Logo JeniSport" class="small-logo">
+            <div class="zapato">
+                <img src="imagenes/zapato1.jpg" alt="Zapato Deportivo">
+                <h3>Zapato Casual</h3>
+                <p>Talla 37 modelo casual para  varón.</p>
+                <button class="precio-btn" onclick="window.location.href='https://chat.whatsapp.com/HO4G5UrVMxC8fadUgMzlwA?mode=wwc'">Precio: s/. 48.00</button>
+            </div>
+            <div class="zapato">
+                <img src="imagenes/zapato2.jpg" alt="Zapato Formal">
+                <h3>Zapato Deportivo</h3>
+                <p>Modelo deportivo  talla 40,41.</p>
+                <button class="precio-btn" onclick="window.location.href='https://chat.whatsapp.com/HO4G5UrVMxC8fadUgMzlwA?mode=wwc'">Precio: s/. 55.00</button>
+            </div>
+            <div class="zapato">
+                <img src="imagenes/zapato3.jpg" alt="Zapato Casual">
+                <h3>Zapato de Deporte</h3>
+                <p>Modelo de deporte talla  40.</p>
+                <button class="precio-btn" onclick="window.location.href='https://chat.whatsapp.com/HO4G5UrVMxC8fadUgMzlwA?mode=wwc'">Precio: s/. 45.00</button>
+            </div>
+            <div class="zapato">
+                <img src="imagenes/zapato4.jpg" alt="Zapato Casual">
+                <h3>Zapato casual </h3>
+                <p>malla importada talla 42.</p>
+                <button class="precio-btn" onclick="window.location.href='https://chat.whatsapp.com/HO4G5UrVMxC8fadUgMzlwA?mode=wwc'">Precio: s/. 55.00</button>
+            </div>
+            <div class="zapato">
+                <img src="imagenes/zapato5.jpg" alt="Zapato Casual">
+                <h3>Zapato Casual</h3>
+                <p>Talla 41 Modelo  casual juvenil.</p>
+                <button class="precio-btn" onclick="window.location.href='https://chat.whatsapp.com/HO4G5UrVMxC8fadUgMzlwA?mode=wwc'">Precio: s/. 55.00</button>
+            </div>
+             <div class="zapato">
+                <img src="imagenes/zapato6.jpg" alt="Zapato Casual">
+                <h3>Zapato Jordan</h3>
+                <p>Modelo  jordan Talla 37,39.</p>
+                <button class="precio-btn" onclick="window.location.href='https://chat.whatsapp.com/HO4G5UrVMxC8fadUgMzlwA?mode=wwc'">Precio: s/. 45.00</button>
+            </div>
+            <div class="zapato">
+                <img src="imagenes/zapato7.jpg" alt="Zapato Casual">
+                <h3>Zapato Casual </h3>
+                <p>Modelo  casual  Talla 40,41,42,43.</p>
+                <button class="precio-btn" onclick="window.location.href='https://chat.whatsapp.com/HO4G5UrVMxC8fadUgMzlwA?mode=wwc'">Precio: s/. 55.00</button>
+            </div>
+            <div class="zapato">
+                <img src="imagenes/zapato8.jpg" alt="Zapato Casual">
+                <h3>Zapato Casual</h3>
+                <p>Modelo  casual Talla 40.</p>
+                <button class="precio-btn" onclick="window.location.href='https://chat.whatsapp.com/HO4G5UrVMxC8fadUgMzlwA?mode=wwc'">Precio: s/. 60.00</button>
+            </div>
+            <div class="zapato">
+                <img src="imagenes/zapato9.jpg" alt="Zapato Casual">
+                <h3>Zapato Caual</h3>
+                <p>Modelo  casual Talla 41.</p>
+                <button class="precio-btn" onclick="window.location.href='https://chat.whatsapp.com/HO4G5UrVMxC8fadUgMzlwA?mode=wwc'">Precio: s/. 60.00</button>
+            </div>
+            <div class="zapato">
+                <img src="imagenes/zapato10.jpg" alt="Zapato Casual">
+                <h3>Zapato Casual</h3>
+                <p>Modelo  casual Talla 40.</p>
+                <button class="precio-btn" onclick="window.location.href='https://chat.whatsapp.com/HO4G5UrVMxC8fadUgMzlwA?mode=wwc'">Precio: s/. 60.00</button>
+            </div>
+       
+        </section>
+    
+    </main>
+    <footer>
+        <p>&copy; 2025 JeniSport. Contanto:+51 999 218 550 </p>
+    </footer>
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const totalSlides = slides.length;
+
+        function moveSlide(direction) {
+            currentSlide += direction;
+            if (currentSlide < 0) {
+                currentSlide = totalSlides - 1;
+            } else if (currentSlide >= totalSlides) {
+                currentSlide = 0;
+            }
+            updateCarousel();
+        }
+
+        function updateCarousel() {
+            const carouselContainer = document.querySelector('.carousel-container');
+            carouselContainer.style.transform = `translateX(-${currentSlide * 100}%)`;
+        }
+    </script>
+</body>
+</html>
